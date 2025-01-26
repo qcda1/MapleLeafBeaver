@@ -7,8 +7,8 @@ The following module is meant to allow a Python programmer to acquire operating 
 
 The communication protocol used at the network layer is RS485. This module was developed on a Raspberry Pi4 using a USB to RS485 converter such as:
 
-<img width="589" alt="CANalyst-II" src="https://github.com/user-attachments/assets/5d50dd73-3f2a-451b-a499-af504f799a08" />
-<img width="285" alt="USB-RS485" src="https://github.com/user-attachments/assets/b54d1531-e68d-44fb-9883-da0b9ccab3b0" />
+<img width="150" alt="USB-RS485" src="https://github.com/user-attachments/assets/700b02ee-b9ce-4ee4-8112-9c86c05fcfe0" />
+<img width="150" alt="WaveShare1" src="https://github.com/user-attachments/assets/07b59fe4-521b-4cc6-9f26-51c1745c5972" />
 
 
 ## BMS protocol
