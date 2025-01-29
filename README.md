@@ -15,8 +15,8 @@ The communication protocol used at the network layer is RS485. This module was d
 With the use of the battery monitoring software provided by Maple Leaf and Wireshark USB communication sniffer program, I was able to determine the the BMS uses a subset of Pylontech RS485 protocol to expose operating data to an external program. This is valid for a certain amount of the available information.The BMS also respond to another set of commands that I have not yet identified.
 
 This first implementation of the module provide functions to get the following two sets of operating data:
-- Get analog value, fixed point (CID2=42<sub>H</sub>)
-- Get system parameter, fixed point (CID2=47<sub>H</sub>)
+- Get analog value, fixed point (CID2=42<sub>H</sub>). Most if not all useful operational values are in this command.
+- Get system parameter, fixed point (CID2=47<sub>H</sub>). Note that data from that command is not clean all the way. Need to study further.
 
 Included in this repository is a document detailing the protocol used here. It is based on multiple annotated PDF Chinese documents.
 
