@@ -297,6 +297,16 @@ class MapleLeafBeaver:
 
 
 if __name__ == "__main__":
+    """ATTENTION: This main section takes for granted the following:
+    1- This process a battery bank of four batteries.
+    2- The USB RS485 interface has a iProduct name "USB2.0-Serial". You can
+       use the function with the default interface name of /dev/ttyUSB2 if
+       your computer's interface is named as such.
+
+    A future version of this module will auto-detect the number of packs
+    to process.
+    """
+
 
     from serial.tools import list_ports
     import pprint
