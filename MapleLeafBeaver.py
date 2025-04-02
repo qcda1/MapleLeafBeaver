@@ -1,5 +1,4 @@
 import serial
-from serial.tools import list_ports
 import time
 import logging
 
@@ -116,6 +115,8 @@ class MapleLeafBeaver:
         full_command = bytearray(command, "ascii")
         #    print("full_command=", full_command)
         #    print("full_command(Hex)=", full_command.hex())
+        log.debug(f"full_command={full_command}")
+        log.debug(f"full_command(Hex)={full_command.hex()}")
         #    print("--------------------------------------------------------------------")
         try:
             with serial.serial_for_url(device, baudrate) as s:
@@ -232,7 +233,7 @@ class MapleLeafBeaver:
         In the case of MapleLeaf Beaver batteries, these values are questionable"""
 
         try:
-            #            print(words)
+            #print(words)
             BD = {}  # MapleLeafBeaver Data
             BD["dtm"] = dtm
             BD["NPack"] = int(words[3 : 3 + 2].decode(), 16) # Pack number 0-32
@@ -298,7 +299,7 @@ class MapleLeafBeaver:
 
 if __name__ == "__main__":
     """ATTENTION: This main section takes for granted the following:
-    1- This process a battery bank of four batteries.
+    1- This program support a battery bank of four batteries.
     2- The USB RS485 interface has a iProduct name "USB2.0-Serial". You can
        use the function with the default interface name of /dev/ttyUSB2 if
        your computer's interface is named as such.

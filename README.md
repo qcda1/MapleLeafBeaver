@@ -21,3 +21,13 @@ This first implementation of the module provide functions to get the following t
 Included in this repository is a document detailing the protocol used here. It is based on multiple annotated PDF Chinese documents.
 
 ## MapleLeafBeaver usage and example
+
+Although it runs well, the module require some additional work with the logging function... I still need to understand the workings of looggers when used in classes... Still, logging works for errors but the line number where the error occured is wrong... If the set up permits, the module will work fine.
+
+By default, the module can be called as is with a main routine that will print battary data for a bank of four batteries. For a different configuration you can modify the code in accordance to the number of batteries you have in your bank. Note that a future release will automatically determine the configuration.
+
+You will need pprint (Pretty Print) module to run the sameple. Just pip install it.
+
+In your program, simply import the module and use its functions to acquire battery data. Function usage is documented in the code.
+Run and look at the sample.py programm for a minimal usage example.
+
