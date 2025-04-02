@@ -29,5 +29,5 @@ By default, the module can be called as is with a main routine that will print b
 You will need pprint (Pretty Print) module to run the sameple. Just pip install it.
 
 In your program, simply import the module and use its functions to acquire battery data. Function usage is documented in the code.
-Run and look at the sample.py programm for a minimal usage example.
+Run and look at the sample.py program for a minimal usage example.
 
