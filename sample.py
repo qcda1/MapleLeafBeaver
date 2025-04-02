@@ -4,13 +4,13 @@
 
 from MapleLeafBeaver import MapleLeafBeaver
 import logging
-import pprint
+from pprint import pp
 
 logging.basicConfig(level=logging.DEBUG)
 log = logging.getLogger("Sample")
 
 p = MapleLeafBeaver("/dev/ttyUSB2", 9600)
 
-pprint.pp(p.get_system_parameters("00"))
+pp(p.get_system_parameters("00"))
 
-pprint.pp(p.get_values("00"))
+pp(p.get_values("00"))

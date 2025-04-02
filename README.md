@@ -31,7 +31,23 @@ You will need pprint (Pretty Print) module to run the sameple. Just pip install 
 In your program, simply import the module and use its functions to acquire battery data. Function usage is documented in the code.
 Run and look at the sample.py program for a minimal usage example.
 
-### Example of running MapleLeafBeaver.py as is from the command line and on a battery bank of four packs:
+sample.py
+
+    from MapleLeafBeaver import MapleLeafBeaver
+    import logging
+    from pprint import pp
+
+    logging.basicConfig(level=logging.DEBUG)
+    log = logging.getLogger("Sample")
+
+    p = MapleLeafBeaver("/dev/ttyUSB2", 9600)
+
+    pp(p.get_system_parameters("00"))
+
+    pp(p.get_values("00"))
+
+
+#### Example of running MapleLeafBeaver.py as is from the command line and on a battery bank of four packs:
 
     pi@rasp02:~/MapleLeafBeaver $ python MapleLeafBeaver.py
 
@@ -94,7 +110,7 @@ Run and look at the sample.py program for a minimal usage example.
     SOH        100                  100                  100                  100                 
 
 
-### Example of running sample.py from a Raspberry Pi connected to my battery bank and inquiry first battery at address 00:
+#### Example of running sample.py from a Raspberry Pi connected to my battery bank and inquiry first battery at address 00:
 
     pi@rasp02:~/MapleLeafBeaver $ python sample1.py
     {'dtm': '2025-04-02 09:44:18',
