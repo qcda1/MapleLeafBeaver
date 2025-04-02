@@ -31,3 +31,119 @@ You will need pprint (Pretty Print) module to run the sameple. Just pip install 
 In your program, simply import the module and use its functions to acquire battery data. Function usage is documented in the code.
 Run and look at the sample.py program for a minimal usage example.
 
+### Example of running MapleLeafBeaver.py as is from the command line and on a battery bank of four packs:
+
+    pi@rasp02:~/MapleLeafBeaver $ python MapleLeafBeaver.py
+
+
+    Key                            P0                        P1                        P2                        P3                       
+    ================================================================================================================================
+    dtm                            2025-04-02 09:54:02       2025-04-02 09:54:02       2025-04-02 09:54:02       2025-04-02 09:54:03      
+    NPack                          0                         1                         2                         3                        
+    UnitCellVoltage                29.5                      29.5                      29.5                      29.5                     
+    UnitCellLowVoltageThreshold    27.0                      27.0                      27.0                      27.0                     
+    UnitCellUnderVoltageThreshold  33.51                     33.51                     33.51                     33.51                    
+    ChargeUpperLimitTemperature    -11.0                     -11.0                     -11.0                     -11.0                    
+    ChargeLowerLimitTemperature    -11.0                     -11.0                     -11.0                     -11.0                    
+    ChargeLowerLimitCurrent        120.0                     120.0                     120.0                     120.0                    
+    UpperLimitOfTotalVoltage       57.6                      57.6                      57.6                      57.6                     
+    LowerLimitOfTotalVoltage       49.0                      49.0                      49.0                      49.0                     
+    UnderVoltageOfTotalVoltage     44.8                      44.8                      44.8                      44.8                     
+    DischargeUpperLimitTemperature 65.0                      65.0                      65.0                      65.0                     
+    DischargeLowerLimitTemperature 216.9                     216.9                     216.9                     216.9                    
+    DischargeLowerLimitCurrent     49.0                      49.0                      49.0                      49.0                     
+
+
+    Key        P0                   P1                   P2                   P3                  
+    =============================================================================================
+    dtm        2025-04-02 09:54:03  2025-04-02 09:54:03  2025-04-02 09:54:03  2025-04-02 09:54:04 
+    NPack      0                    1                    2                    3                   
+    NbCell     16                   16                   16                   16                  
+    VCell1     3454                 3454                 3465                 3468                
+    VCell2     3455                 3469                 3467                 3467                
+    VCell3     3455                 3467                 3466                 3472                
+    VCell4     3475                 3469                 3467                 3467                
+    VCell5     3468                 3465                 3466                 3468                
+    VCell6     3467                 3456                 3466                 3472                
+    VCell7     3455                 3466                 3464                 3471                
+    VCell8     3462                 3463                 3467                 3471                
+    VCell9     3464                 3467                 3444                 3471                
+    VCell10    3475                 3475                 3467                 3468                
+    VCell11    3475                 3472                 3469                 3469                
+    VCell12    3476                 3472                 3454                 3472                
+    VCell13    3468                 3469                 3469                 3473                
+    VCell14    3452                 3462                 3469                 3469                
+    VCell15    3471                 3469                 3468                 3435                
+    VCell16    3476                 3469                 3469                 3471                
+    VTot       55.448               55.464               55.437               55.484              
+    NbT        7                    7                    7                    7                   
+    T1         12.4                 12.9                 12.3                 12.6                
+    T2         12.4                 12.5                 12.7                 12.7                
+    T3         12.7                 12.9                 12.7                 13.0                
+    T4         12.6                 13.2                 13.1                 13.1                
+    T5         14.4                 14.1                 13.9                 14.2                
+    T6         13.9                 14.1                 13.8                 14.3                
+    T7         13.5                 13.6                 13.4                 13.6                
+    Current    0.0                  0.0                  0.0                  0.0                 
+    BatVolt    55.41                55.39                55.44                55.43               
+    RemCap     100.0                99.98                100.0                99.99               
+    CapInd     4                    4                    4                    4                   
+    TotCap     100.0                100.0                100.0                100.0               
+    NbCycles   24                   25                   24                   27                  
+    RemCapR    100                  99                   100                  99                  
+    SOH        100                  100                  100                  100                 
+
+
+### Example of running sample.py from a Raspberry Pi connected to my battery bank and inquiry first battery at address 00:
+
+    pi@rasp02:~/MapleLeafBeaver $ python sample1.py
+    {'dtm': '2025-04-02 09:44:18',
+    'NPack': 0,
+    'UnitCellVoltage': 29.5,
+    'UnitCellLowVoltageThreshold': 27.0,
+    'UnitCellUnderVoltageThreshold': 33.51,
+    'ChargeUpperLimitTemperature': -11.0,
+    'ChargeLowerLimitTemperature': -11.0,
+    'ChargeLowerLimitCurrent': 120.0,
+    'UpperLimitOfTotalVoltage': 57.6,
+    'LowerLimitOfTotalVoltage': 49.0,
+    'UnderVoltageOfTotalVoltage': 44.8,
+    'DischargeUpperLimitTemperature': 65.0,
+    'DischargeLowerLimitTemperature': 216.9,
+    'DischargeLowerLimitCurrent': 49.0}
+    {'dtm': '2025-04-02 09:44:18',
+    'NPack': 0,
+    'NbCell': 16,
+    'VCell1': 3455,
+    'VCell2': 3456,
+    'VCell3': 3456,
+    'VCell4': 3475,
+    'VCell5': 3468,
+    'VCell6': 3467,
+    'VCell7': 3456,
+    'VCell8': 3462,
+    'VCell9': 3465,
+    'VCell10': 3475,
+    'VCell11': 3474,
+    'VCell12': 3476,
+    'VCell13': 3468,
+    'VCell14': 3453,
+    'VCell15': 3471,
+    'VCell16': 3476,
+    'VTot': 55.453,
+    'NbT': 7,
+    'T1': 12.4,
+    'T2': 12.4,
+    'T3': 12.8,
+    'T4': 12.6,
+    'T5': 14.4,
+    'T6': 13.9,
+    'T7': 13.5,
+    'Current': 0.0,
+    'BatVolt': 55.41,
+    'RemCap': 100.0,
+    'CapInd': 4,
+    'TotCap': 100.0,
+    'NbCycles': 24,
+    'RemCapR': 100,
+    'SOH': 100}
