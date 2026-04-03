@@ -12,7 +12,7 @@ The communication protocol used at the network layer is RS485. This module was d
 
 
 ## BMS protocol
-With the use of the battery monitoring software provided by Maple Leaf and Wireshark USB communication sniffer program, I was able to determine the the BMS uses a subset of Pylontech RS485 protocol to expose operating data to an external program. This is valid for a certain amount of the available information.The BMS also respond to another set of commands that I have not yet identified.
+With the use of the battery monitoring software provided by Maple Leaf and Wireshark USB communication sniffer program, I was able to determine that the BMS uses a subset of Pylontech RS485 protocol to expose operating data to an external program. This is valid for a certain amount of the available information. The BMS also respond to another set of commands that I have not yet identified.
 
 This first implementation of the module provide functions to get the following two sets of operating data:
 - Get analog value, fixed point (CID2=42<sub>H</sub>). Most if not all useful operational values are in this command.
@@ -22,10 +22,11 @@ Included in this repository is a document detailing the protocol used here. It i
 
 ## MapleLeafBeaver usage and example
 
-Although it runs well, the module require some additional work with the logging function... I still need to understand the workings of looggers when used in classes... Still, logging works for errors but the line number where the error occured is wrong... If the set up permits, the module will work fine.
+Although it runs well, the module require some additional work with the logging function... I still need to understand the workings of loggers when used in classes... Still, logging works for errors but the line number where the error occured is wrong...
 
 By default, the module can be called as is with a main routine that will print battary data for a bank of four batteries. For a different configuration you can modify the code in accordance to the number of batteries you have in your bank. Note that a future release will automatically determine the configuration.
 
+The functions return battery data in the form of a Python dict with a timestamp. From there, you can do pretty much what you want to process the data.
 You will need pprint (Pretty Print) module to run the sameple. Just pip install it.
 
 In your program, simply import the module and use its functions to acquire battery data. Function usage is documented in the code.
